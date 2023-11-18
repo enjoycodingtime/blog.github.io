@@ -1,0 +1,375 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>读书笔记-PHP核心技术与最佳实践-Stay Hungry, Stay Foolish</title>
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="Be Better">
+    <link href="/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">    
+    <link rel="stylesheet" href="/css/main.css" />
+    
+    <meta name="msvalidate.01" content="D8350FC7417B692DE23E5326C13202D3" />
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body class="wave">
+    <nav class="navbar blog-header navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Stay Hungry, Stay Foolish</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="菜单">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">首页</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about/">关于</a>
+                    </li>
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container blog-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9">
+                <div class="blog-post-detail">
+    <div class="blog-post-title">
+      <h1>读书笔记-PHP核心技术与最佳实践</h1>
+    </div>
+    <div class="blog-post-meta">
+        
+        <span class="post-time">更新于：2023-11-18 15:28:21</span>
+        
+        <span class="post-time">发布于：2019-07-13 23:59:40</span>
+    </div>
+    <div class="blog-post-content">
+      <div class="blog-post-ad">
+        <!-- <h3>为感谢各位朋友对本站的关注，在2021年元旦即将到来之际为大家提供一张「腾讯视频VIP兑换卡」，扫描下方的小程序二维码即可参与活动，活动中奖者将获得一张「腾讯视频VIP兑换卡」，感谢大家对小站的支持，祝大家好运并提前祝大家新年快乐！</h3> -->
+        <!-- <div>
+          <a href="https://cloud.tencent.com/developer/grocery-stall3?invitedUid=2725480" target="_parent"><img src="/image/ad_image.png" alt="扫码参与活动，攒云+值，得云+社区定制礼盒"></a>
+        </div> -->
+      </div>
+      <h1 id="面向对象思想的核心概念"><a href="#面向对象思想的核心概念" class="headerlink" title="面向对象思想的核心概念"></a>面向对象思想的核心概念</h1><h5 id="异常与错误处理"><a href="#异常与错误处理" class="headerlink" title="异常与错误处理"></a>异常与错误处理</h5><p>PHP里面，遇到任何自身错误都会触发一个错误，而不是抛出异常，PHP遇到非正常代码，通常会触发错误，而不是抛出异常，所以这种错误是不能用异常捕获的。 <strong>PHP只有手动抛出异常后才能捕获。</strong></p>
+<h5 id="PHP中的错误处理机制"><a href="#PHP中的错误处理机制" class="headerlink" title="PHP中的错误处理机制"></a>PHP中的错误处理机制</h5><p>php错误有很多种：warning,notice,deprecated,fatal error。PHP无法自动抛出异常，必须手动进行，可以用set_error_handler接管，进而主动抛出异常。</p>
+<h1 id="面向对象的设计原则"><a href="#面向对象的设计原则" class="headerlink" title="面向对象的设计原则"></a>面向对象的设计原则</h1><h6 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h6><p>single responsibility principle,SRP</p>
+<p>就一个类而言，应该只有一个引起它变化的原因。</p>
+<p>避免相同的职责分散到不同的类中，避免一个类承担太多职责</p>
+<h5 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h5><p>interface segregation principle,ISP</p>
+<p>客户端不应该依赖它不需要的接口</p>
+<p>类间的依赖关系应该建立在最小的接口上</p>
+<h5 id="开放-封闭原则"><a href="#开放-封闭原则" class="headerlink" title="开放-封闭原则"></a>开放-封闭原则</h5><p>open-close principle，OCP</p>
+<p>open for extension，模块的行为必须是开放的，支持扩展的，而不是僵化的</p>
+<p>close for modification，在对模块的功能进行扩展是，不应该影响或大规模地影响已有的模块</p>
+<h5 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h5><p>Liskov Substitution Principle，LSP</p>
+<p>子类型必须能够替换掉它们的父类型、并出现在父类能够出现的任何地方</p>
+<h5 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a>依赖倒置原则</h5><p>上层模块不应该依赖于下层模块，它们共同依赖于一个抽象</p>
+<p>抽象不能依赖于具体，具体应该要依赖于抽象</p>
+<h1 id="正则表达式基础与应用"><a href="#正则表达式基础与应用" class="headerlink" title="正则表达式基础与应用"></a>正则表达式基础与应用</h1><h1 id="PHP网络技术及应用"><a href="#PHP网络技术及应用" class="headerlink" title="PHP网络技术及应用"></a>PHP网络技术及应用</h1><p>HTTP（Hyper Text Transfer Protocol，超文本传输协议），是一个应用层协议，由请求和响应构成，是一个标准的客户端服务器模型。HTTP通常承载于TCP协议之上（80端口），有时也承载于TLS或SSL协议层之上（HTTPS，443端口）。HTTP协议是一个无状态的协议，同一个客户端的这次请求和上次请求没有对应关系。</p>
+<h5 id="HTTP协议是如何工作的"><a href="#HTTP协议是如何工作的" class="headerlink" title="HTTP协议是如何工作的"></a>HTTP协议是如何工作的</h5><p>客户端发送一个请求（request）个服务器，服务器在接受到这个请求后将生成一个响应（response）返回给客户端。一次HTTP操作称为一个食物，其工作过程可分为4步。</p>
+<ol>
+<li>客户机于服务器需要建立连接，单击某个超链接，http协议的工作开始</li>
+<li>客户机发送一个请求给服务器</li>
+<li>服务器接到请求后，给予响应的响应信息</li>
+<li>客户端接受服务器返回的信息并显示在用户的显示屏上，然后客户机于服务器断开连接</li>
+</ol>
+<h6 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h6><p>请求由3部分组成：请求行，消息报头，请求正文</p>
+<p>请求行： Method Request-URI HTTP-Version CRLF</p>
+<h6 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h6><p>响应也由3部分组成：状态行，消息报头，响应正文</p>
+<p>状态行：HTTP-Version Status-Code Reasion-Phrase CRLF</p>
+<h6 id="报头"><a href="#报头" class="headerlink" title="报头"></a>报头</h6><p>普通报头、请求报头、响应报头、实体报头</p>
+<p>Host</p>
+<p>User-Agent</p>
+<p>Accept</p>
+<p>Cookie</p>
+<p>Set-Cookie</p>
+<p>Cache-Control</p>
+<p>Referer</p>
+<p>Content-Length</p>
+<p>Accept-Encoding</p>
+<h6 id="HTTP应用，模拟灌水机器人"><a href="#HTTP应用，模拟灌水机器人" class="headerlink" title="HTTP应用，模拟灌水机器人"></a>HTTP应用，模拟灌水机器人</h6><ol>
+<li>cURL库</li>
+<li>file_get_contents</li>
+<li>socket系列函数</li>
+<li>等等</li>
+</ol>
+<h6 id="垃圾请求防御"><a href="#垃圾请求防御" class="headerlink" title="垃圾请求防御"></a>垃圾请求防御</h6><ol>
+<li>IP限制（ip无法伪造）</li>
+<li>验证码</li>
+<li>Token和表单</li>
+<li>审核机制</li>
+</ol>
+<p>cURL步骤</p>
+<ol>
+<li>初始化 $ch &#x3D; curl_init()</li>
+<li>设置选项，包括URL  curl_setopt($ch, CURLOPT_URL, &quot;<a target="_blank" rel="noopener" href="http://www.php.net/">http://www.php.net</a>&quot;)</li>
+<li>执行并获取HTML文档内容 $out &#x3D; curl_exec($ch)</li>
+<li>释放curl句柄 curl_close()</li>
+</ol>
+<h6 id="Cookie于Session问答"><a href="#Cookie于Session问答" class="headerlink" title="Cookie于Session问答"></a>Cookie于Session问答</h6><ol>
+<li>cookie运行在客服端，session运行在服务器端，对吗？ 不完全对，cookie运行在客户端，由客户端进行管理，session虽然运行在服务端，但是sessionId最为一个cookie是存储在客户端的</li>
+<li>浏览器禁止cookie，cookie就不能用了，但session不会受浏览器影响，对吗？错。会影响，可通过URL传递session</li>
+<li>浏览器关闭后，cookie和session都消失了，对吗？错</li>
+<li>session比cookie安全吗？错误</li>
+</ol>
+<h1 id="PHP与数据库基础"><a href="#PHP与数据库基础" class="headerlink" title="PHP与数据库基础"></a>PHP与数据库基础</h1><p>pdo：php data objects，提供一个通用结构访问多种数据库，即抽象的数据模型支持连接多种数据库</p>
+<p>事务的主要特性：</p>
+<ol>
+<li>原子性</li>
+<li>一致性</li>
+<li>独立性</li>
+<li>持久性</li>
+</ol>
+<p>原子性:整个事务中的所有操作，要么全部完成，要么全部不完成，不可能停滞在中间某个环节。事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。</p>
+<p>一致性:在事务开始之前和事务结束以后，数据库的完整性约束没有被破坏。</p>
+<p>隔离性:隔离状态执行事务，使它们好像是系统在给定时间内执行的唯一操作。如果有两个事务，运行在相同的时间内，执行 相同的功能，事务的隔离性将确保每一事务在系统中认为只有该事务在使用系统。这种属性有时称为串行化，为了防止事务操作间的混淆，必须串行化或序列化请 求，使得在同一时间仅有一个请求用于同一数据。</p>
+<p>持久性:在事务完成以后，该事务所对数据库所作的更改便持久的保存在数据库之中，并不会被回滚。</p>
+<h6 id="数据库应用优化"><a href="#数据库应用优化" class="headerlink" title="数据库应用优化"></a>数据库应用优化</h6><p>数据库优化的思路：</p>
+<p>避免在列上运算，会导致索引失效</p>
+<p>使用join是，应该用小结果集驱动大结果集</p>
+<p>注意like模糊查询的使用，避免%%</p>
+<p>列出需要查询的字段，节省内存</p>
+<p>使用批量插入语句节省交互</p>
+<p>limit的技术比较大时使用between</p>
+<p>不要使用rand函数获取多条随机记录</p>
+<p>避免使用null</p>
+<p>不要count(id)，而应该是count(*)</p>
+<p>1）应尽量避免在 where 子句中使用!&#x3D;或&amp;lt;&amp;gt;操作符，否则将引擎放弃使用索引而进行全表扫描。</p>
+<p>2）应尽量避免在 where 子句中对字段进行 null 值判断，否则将导致引擎放弃使用索引而进行全表扫描，如：</p>
+<p>select id from t where num is null</p>
+<p>可以在num上设置默认值0，确保表中num列没有null值，然后这样查询：</p>
+<p>select id from t where num&#x3D;0</p>
+<p>3）很多时候用 exists 代替 in 是一个好的选择</p>
+<p>4）用Where子句替换HAVING 子句 因为HAVING 只会在检索出所有记录之后才对结果集进行过滤</p>
+<p>禁止使用select *、like %xxx</p>
+<p>避免使用复杂的sql（不利于理解、优化和缓存）</p>
+<p>不要在where索引字段上使用函数、变量、进行数学运算、（索引可能无法使用）</p>
+<p>Or &amp; in 优先使用in</p>
+<p>不要使用负向查询（not in、not like）</p>
+<p>注意limit的效率</p>
+<p>避免让mysql做复杂的数学运算</p>
+<p>小心地使用trigger和store procedure</p>
+<p>Explain select，尽量让where、group by、order by使用索引（最好是主键索引）</p>
+<p>Update和delete改为select后explain看执行计划</p>
+<p>视情况使用exist代替in</p>
+<p>表连接注意连接顺序，用小表连大表，不要大表连小表</p>
+<p>用到临时表的sql使用前注意查看db对临时表大小的限制(tmp_table_size)</p>
+<p>用到文件排序时注意查看排序缓冲大小(sort_buffer_size)</p>
+<p>不要在引擎不同的表上执行事务</p>
+<p>数据库结构优化:</p>
+<p>1）范式优化： 比如消除冗余（节省空间。。） 2）反范式优化：比如适当加冗余等（减少join） 3）拆分表： 分区将数据在物理上分隔开，不同分区的数据可以制定保存在处于不同磁盘上的数据文件里。这样，当对这个表进行查询时，只需要在表分区中进行扫描，而不必进行全表扫描，明显缩短了查询时间，另外处于不同磁盘的分区也将对这个表的数据传输分散在不同的磁盘I&#x2F;O，一个精心设置的分区可以将数据传输对磁盘I&#x2F;O竞争均匀地分散开。对数据量大的时时表可采取此方法。可按月自动建表分区。</p>
+<p>4）拆分其实又分垂直拆分和水平拆分： 案例： 简单购物系统暂设涉及如下表： 1.产品表（数据量10w，稳定） 2.订单表（数据量200w，且有增长趋势） 3.用户表 （数据量100w，且有增长趋势） 以mysql为例讲述下水平拆分和垂直拆分，mysql能容忍的数量级在百万静态数据可以到千万 垂直拆分：解决问题：表与表之间的io竞争 不解决问题：单表中数据量增长出现的压力 方案： 把产品表和用户表放到一个server上 订单表单独放到一个server上 水平拆分： 解决问题：单表中数据量增长出现的压力 不解决问题：表与表之间的io争夺</p>
+<p>方案： 用户表通过性别拆分为男用户表和女用户表 订单表通过已完成和完成中拆分为已完成订单和未完成订单 产品表 未完成订单放一个server上 已完成订单表盒男用户表放一个server上 女用户表放一个server上(女的爱购物 哈哈)</p>
+<h6 id="存储引擎的选择"><a href="#存储引擎的选择" class="headerlink" title="存储引擎的选择"></a>存储引擎的选择</h6><p>MyISAM: R&#x2F;W &amp;gt; 100:1且update相对较少</p>
+<p>并发不高，不需要事务</p>
+<p>表数据量小</p>
+<p>硬件资源有限</p>
+<p>InnoDB：R&#x2F;W较小，频繁更新大字段</p>
+<p>表数据量超过1000w，并发高</p>
+<p>安全性可可用性要求高</p>
+<p>mysql瓶颈及应对措施</p>
+<ol>
+<li>增加mysql配置中的buffer和cache的数值</li>
+<li>使用第三方引擎或衍生版本</li>
+<li>迁移到其他数据库</li>
+<li>对数据库进行分区、分表操作，减少单表体积</li>
+<li>使用nosql等辅助解决方案，如memchched，redis</li>
+<li>使用中间件做数据拆分和分布式部署，如阿里巴巴的cobar</li>
+<li>使用数据库连接池技术</li>
+</ol>
+<h6 id="范式与反范式"><a href="#范式与反范式" class="headerlink" title="范式与反范式"></a>范式与反范式</h6><ol>
+<li>核心业务使用范式</li>
+<li>若一致性需求-反ACID  原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）、持久性（Durability）</li>
+<li>空间换时间，冗余换效率</li>
+<li>避免不必要的冗余</li>
+</ol>
+<h1 id="Memcached使用实践"><a href="#Memcached使用实践" class="headerlink" title="Memcached使用实践"></a>Memcached使用实践</h1><p>memcached是高性能的分布式缓存服务器，数据存储在内存中，重启memcached或系统会导致数据全部消失，或内存容量达到指定值后，会使用lRU（Leatst Recently Used）算法自动删除不使用的缓存。memcached是一个多线程的缓存服务器，包括主线程（接受连接）和工作线程（处理连接请求）。</p>
+<h5 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h5><ul>
+<li>协议简单</li>
+<li>基于libevent的事件处理</li>
+<li>内置内存存储方式</li>
+<li>采用不互相通信的分布式</li>
+</ul>
+<h5 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h5><ul>
+<li>connect连接服务器</li>
+<li>addServer</li>
+<li>add添加一个缓存数据，如果存在会返回失败</li>
+<li>replace替换缓存数据</li>
+<li>set 设置一个key的缓存内容，add和replace的集合体</li>
+<li>get </li>
+<li>delete</li>
+<li>flush</li>
+<li>getServerStatus</li>
+<li>getStatus</li>
+</ul>
+<h5 id="过期"><a href="#过期" class="headerlink" title="过期"></a>过期</h5><p>memcached为每个item设置一个过期时间，但不是到期就把item从内存中删除，而是访问item时如果到了有效期，才把item从内存中删除</p>
+<h5 id="LRU算法淘汰数据"><a href="#LRU算法淘汰数据" class="headerlink" title="LRU算法淘汰数据"></a>LRU算法淘汰数据</h5><p>当内存不够时，使用LRU算法淘汰旧的数据。淘汰规则是：从数据项列表尾部开始遍历，在列表中查找一个引用计数器为0的item释放掉，如果找不到引用计数器为0的，就找3小时没有访问过的。</p>
+<h5 id="分布式布置方案"><a href="#分布式布置方案" class="headerlink" title="分布式布置方案"></a>分布式布置方案</h5><ul>
+<li>普通hash：通过hash函数把key转化为整数后，与服务器数量取模</li>
+<li>一致性hash分布及增加虚拟节点改进算法</li>
+</ul>
+<h1 id="Redis使用与实践"><a href="#Redis使用与实践" class="headerlink" title="Redis使用与实践"></a>Redis使用与实践</h1><h5 id="key命令"><a href="#key命令" class="headerlink" title="key命令"></a>key命令</h5><ul>
+<li>exit key</li>
+<li>del key</li>
+<li>type key</li>
+<li>keys pattern</li>
+<li>expire key seconds：设置过期时间</li>
+<li>ttl key：返回过期时间</li>
+<li>randomKey 返回随机key，如果为空，返回空串</li>
+<li>rename oldKey newKey</li>
+<li>move key db-index</li>
+</ul>
+<h5 id="支持的数据类型"><a href="#支持的数据类型" class="headerlink" title="支持的数据类型"></a>支持的数据类型</h5><ul>
+<li><p>String<br>字符串类型是redis最基础的数据结构，首先键是字符串类型，而且其他几种结构都是在字符串类型基础上构建的<br>字符串类型实际上可以是字符串、数字、二进制（图片、音频），单最大不能超过512M<br>使用场景：</p>
+<ol>
+<li>缓存<br>字符串最经典的使用场景，redis作为缓存层，mysql作为存储层，绝大部分请求数据都是redis中获取，由于redis具有支撑高并发特性，所以缓存通常能起到加速读写和降低后端压力的作用</li>
+<li>计数器<br>许多应用都会使用redis作为技术的基础工具，它可以实现快速技术、查询缓存的功能。</li>
+<li>共享session<br>处于负载均衡的考虑，分布式服务会将用户信息的访问均衡到不同服务器，用户刷新一次访问可讷讷个会需要重新登录，为了避免这个问题可以使用redis将用户session集中管理，在这种模式下只要保证redis的高可用和扩展性，每次获取用户更新或查询登录信息都直接从redis中集中获取</li>
+<li>限速<br>出于安全考虑，每次进行登录时让用户输入手机验证码，为了短信接口不被频繁访问，会限制用户每分钟获取验证码的频率</li>
+</ol>
+</li>
+<li><p>Hash<br>在redis中哈希类型是指键本身又是一种键值对结构<br>使用场景:</p>
+<ol>
+<li>哈希结构相对于字符串序列化缓存信息更加直观，并且在更新操作上更加便捷。</li>
+</ol>
+</li>
+<li><p>list<br>列表类型是用来存储多个有序的字符串，列表的每个字符串成为一个元素，一个列表最多可以存储2的32次方减1个元素。在redis中，可以对列表插入(push)和弹出（pop），还可以获取指定范围的元素列表。列表是一种比较灵活的数据结构，它可以充当栈和队列的角色。<br>使用场景：</p>
+<ol>
+<li><p>消息队列<br>redis的<code>lpush+brpop</code>命令组合就可以实现阻塞队列，生产者客户端是用<code>lpush</code>从列表左侧插入元素，多个消费者客户端使用<code>brpop</code>命令阻塞式的抢列表尾部的元素，多个客户端保证了消费的负载均衡的高可用性。</p>
+</li>
+<li><p>使用技巧列表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lpush+lpop=Stack(栈)</span><br><span class="line">lpush+rpop=Queue(队列)</span><br><span class="line">lpush+ltrim=Capped Collection(有限集合)</span><br><span class="line">lpush+brpop=Message Queue（消息队列）</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>Set：查找删除时间复杂度为O(1)</p>
+</li>
+<li><p>Sorted Set：查找删除修改时间复杂度为O(1)，适用于存储对象</p>
+</li>
+</ul>
+<p>支持排序：SORT key</p>
+<h5 id="事务处理"><a href="#事务处理" class="headerlink" title="事务处理"></a>事务处理</h5><p>保证一个客户端连接发起事务中的命令可以连续执行，而中间不会插入其他客户端连接的命令。</p>
+<p>命令：muti   XXXX  exec</p>
+<h5 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h5><ul>
+<li>内存快照（snapshotting,rdb）：保存内存快照可能阻塞其他客户端请求，影响性能，如果重启或宕机可能会丢失上次save之后的数据。</li>
+<li>日志追加（append-only file,aof）：可有效降低数据丢失的风险，持久化文件可能过大。</li>
+</ul>
+<h5 id="主从同步"><a href="#主从同步" class="headerlink" title="主从同步"></a>主从同步</h5><p>优点：</p>
+<ul>
+<li>master可配置多个slave</li>
+<li>多个slave连接到相同master，salve还可以连接其他slave</li>
+<li>不会阻塞master</li>
+<li>主从同步用来提交系统的伸缩性，比如多个salve用于读请求</li>
+<li>在master服务器禁止数据持久化</li>
+</ul>
+<p>同步原理：</p>
+<p>设置好slave服务器后，slave自动和master建立连接，发送sync命令，master启动一个后台进程，将数据已快照方式写入文件，同时master主进程开始收集新的写命令并且缓存下来。master完成快照操作后，将数据文件发送给slave，slave将文件保存到磁盘，然后把数据加载到内存中。接着master把缓存的命令发送给slave。</p>
+<h5 id="深入redis内核"><a href="#深入redis内核" class="headerlink" title="深入redis内核"></a>深入redis内核</h5><p>内存淘汰：当内存不足时，有两种处理方式，启用虚拟内存（vm-enabled&#x3D;yes），启用内存淘汰（maxmemory &gt;0）。</p>
+<p>淘汰算法：</p>
+<ul>
+<li>随机淘汰：随机删除一个key</li>
+<li>LRU淘汰：删除一个最近最少访问的key</li>
+<li>TTL淘汰：删除一个最快过期的key</li>
+</ul>
+<p>清除过期数据：</p>
+<ul>
+<li>定时进行：每100毫秒进行一次清理数据操作</li>
+<li>在用户获取数据时进行</li>
+</ul>
+<h5 id="Redis和Memcached的区别"><a href="#Redis和Memcached的区别" class="headerlink" title="Redis和Memcached的区别"></a>Redis和Memcached的区别</h5><ul>
+<li>Redis和Memcache都是将数据存放在内存中，都是内存数据库。但是Memcache还可以缓存其他东西，比如图片、视频</li>
+<li>Redis不只支持简单的k&#x2F;v类型的数据，同时还提供list、set、hash等数据结构的存储</li>
+<li>虚拟内存，当物理内存用完时Redis可以将一些很久没有用到的value交换到磁盘</li>
+<li>过期策略，memcache在set时就指定，例如<code>set key1 0 0 8</code>即永不过期，redis可以通过expire设定，例如：<code>expire name 10</code></li>
+<li>分布式，设定memcache集群，利用magent做一主多从；redis也可以做一主多从。</li>
+<li>存储安全，memcache挂掉后，数据没了；redis可以定期保存在磁盘（持久化）</li>
+<li>灾难恢复，memcache挂掉后数据不可恢复；redis数据丢失后可以通过aof恢复</li>
+<li>redis支持数据的备份，即master-slave模式的数据备份</li>
+<li>应用场景不同：redis除了可以做nosql数据库之外，还能做消息队列、数据堆栈和数据缓存等。memcache适合于缓存sql语句、数据集、用户临时性数据、延迟查询数据和session等。</li>
+</ul>
+
+      <div class="blog-post-footer">
+        <p><img src="/image/qrcode.jpg" alt=""></p>
+        <p><b>用心体验、认真记录</b>，欢迎关注<a target="_blank" rel="noopener" href="https://www.edulinks.cn">大江小浪</a>的技术人生！</p>
+      </div>
+    </div>
+    
+    <div class="blog-post-nav row">
+      
+        <div class="nav-link col-md-6">
+          <a href="/2019/07/15/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%B4%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
+            &lt;&lt; 排序算法整理
+          </a>  
+        </div>
+      
+      
+        <div class="nav-link col-md-6">
+          <a href="/2019/04/15/centos%E5%AE%89%E8%A3%85php7-1/" id="article-nav-older" class="article-nav-link-wrap">
+            centos安装php7.1 &gt;&gt;
+          </a>
+        </div>
+      
+    </div>
+        
+  </div>
+  
+            </div>
+            <div class="blog-side col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+                <div class="blog-profile">
+                    <div class="blog-author">
+
+    <div class="author-img">
+        <a href="#"><img src="/image/qrcode.jpg" alt=""></a>
+    </div>
+
+    <div class="author-desc">
+        <h1>Mr Hua</h1>
+        <p></p>
+    </div>
+</div>
+                </div>
+                <div class="blog-google-ads">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     <!-- EDULINKS-Right -->
+     <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-2449691085720111"
+          data-ad-slot="7013232113"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+     <script>
+
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid blog-footer">
+        <div class="container">
+            <div class="row blog-friend-link">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h3>友情链接</h3>
+                </div>
+                
+                
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                    <a target="_blank" href="http://www.edulinks.cn">大江小浪</a>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="blog-copyright">
+                    <p>&copy; 2020 - 2023 All rights reserved. Stay Hungry, Stay Foolish   </p>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>
