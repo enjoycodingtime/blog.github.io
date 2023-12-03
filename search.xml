@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>IntelliJ IDEA神器使用技巧</title>
-    <url>/2019/07/28/IntelliJ-IDEA%E7%A5%9E%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+    <url>/Chic/2019/07/28/IntelliJ-IDEA%E7%A5%9E%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<p>工欲善其事，必先利其器，IntelliJ IDEA神器使用技巧</p>
 <p>代码生成技术	<br>批量编辑技术	<br>代码调试技术	<br>代码智能修复技术	<br>智能上下文关联技术	<br>代码重构技术	<br>高效的版本控制管理技术	</p>
 <p>视频教程：<a href="https://www.imooc.com/learn/924">https://www.imooc.com/learn/924</a></p>
@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <title>Mac设置iterm走v2ray代理</title>
-    <url>/2023/11/18/Mac%E8%AE%BE%E7%BD%AEiterm%E8%B5%B0v2ray%E4%BB%A3%E7%90%86/</url>
+    <url>/Chic/2023/11/18/Mac%E8%AE%BE%E7%BD%AEiterm%E8%B5%B0v2ray%E4%BB%A3%E7%90%86/</url>
     <content><![CDATA[<p>在 OSX 或其他 Linux&#x2F;Unix 平台上如何让终端走代理?</p>
 <ol>
 <li>开启v2RayU</li>
@@ -27,7 +27,7 @@
   </entry>
   <entry>
     <title>centos安装PHP7</title>
-    <url>/2019/03/19/centos%E5%AE%89%E8%A3%85PHP7/</url>
+    <url>/Chic/2019/03/19/centos%E5%AE%89%E8%A3%85PHP7/</url>
     <content><![CDATA[<p>1，更改yum源：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br><span class="line">rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</span><br></pre></td></tr></table></figure>
 
@@ -47,7 +47,7 @@
   </entry>
   <entry>
     <title>centos安装php7.1</title>
-    <url>/2019/04/15/centos%E5%AE%89%E8%A3%85php7-1/</url>
+    <url>/Chic/2019/04/15/centos%E5%AE%89%E8%A3%85php7-1/</url>
     <content><![CDATA[<p>1，更改yum源：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br><span class="line">rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</span><br></pre></td></tr></table></figure>
 
@@ -70,12 +70,12 @@
   </entry>
   <entry>
     <title>codeReview怎么做</title>
-    <url>/2019/09/17/codeReview%E6%80%8E%E4%B9%88%E5%81%9A/</url>
+    <url>/Chic/2019/09/17/codeReview%E6%80%8E%E4%B9%88%E5%81%9A/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>java面试总结</title>
-    <url>/2020/03/01/java%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/</url>
+    <url>/Chic/2020/03/01/java%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h3 id="零、写简历"><a href="#零、写简历" class="headerlink" title="零、写简历"></a>零、写简历</h3><p>简历可以先写，写完多自己看看，自己问问，做优化或调整。内容可以多看看目标岗位的【工作要求】。我写简历用到的网站：超级简历。</p>
 <h3 id="一、面试准备"><a href="#一、面试准备" class="headerlink" title="一、面试准备"></a>一、面试准备</h3><ol>
 <li><p>复习面试知识点：主要参考《JAVA核心知识点整理.pdf》 云盘：链接:<a href="https://pan.baidu.com/s/11YfQ_2ZH5ygK35GLlJLFgw">https://pan.baidu.com/s/11YfQ_2ZH5ygK35GLlJLFgw</a>  密码:3v51</p>
@@ -117,12 +117,12 @@
   </entry>
   <entry>
     <title>js排序算法</title>
-    <url>/2019/03/21/js%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <url>/Chic/2019/03/21/js%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var examplearr = [1,23,4,1,13,2,4]</span><br><span class="line">//冒泡排序</span><br><span class="line">function sortarr(arr) &#123;</span><br><span class="line">	for (i=0;i&lt;arr.length-1;i++)&#123;</span><br><span class="line">		for(j=0;j&lt;arr.length-1-i;j++)&#123;</span><br><span class="line">			if(arr[j] &gt; arr[j+1])&#123;</span><br><span class="line">				var temp = arr[j]</span><br><span class="line">				arr[j] = arr[j+1]</span><br><span class="line">				arr[j+1] = temp</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return arr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//快速排序</span><br><span class="line">function quickSort(arr)&#123;</span><br><span class="line">	if(arr.length&lt;=1)&#123;</span><br><span class="line">		return arr</span><br><span class="line">	&#125;</span><br><span class="line">	//找基准</span><br><span class="line">	var baseIndex = Math.floor(arr.length/2)</span><br><span class="line">	var base = arr.splice(baseIndex,1)[0]</span><br><span class="line">	var left = []</span><br><span class="line">	var right = []</span><br><span class="line">	//比基准小的放在left，比基准大的放在right</span><br><span class="line">	for(var i = 0; i&lt;arr.length;i++)&#123;</span><br><span class="line">		if(arr[i]&lt;= base) &#123;</span><br><span class="line">			left.push(arr[i])</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			right.push(arr[i])</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return quickSort(left).concat([base],quickSort(right))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>mac下idea卡顿问题解决</title>
-    <url>/2019/09/30/mac%E4%B8%8Bidea%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
+    <url>/Chic/2019/09/30/mac%E4%B8%8Bidea%E5%8D%A1%E9%A1%BF%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<p>idea在加载相对来说比较大的系统时，经常性出现卡顿，就是直接卡死，写起代码特别难受</p>
 <p>解决步骤：</p>
 <ol>
@@ -141,7 +141,7 @@
   </entry>
   <entry>
     <title>mac设置sublimeText命令行命令subl</title>
-    <url>/2019/04/14/mac%E8%AE%BE%E7%BD%AEsublimeText%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%91%BD%E4%BB%A4subl/</url>
+    <url>/Chic/2019/04/14/mac%E8%AE%BE%E7%BD%AEsublimeText%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%91%BD%E4%BB%A4subl/</url>
     <content><![CDATA[<h4 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h4><p>Mac + iterm + zsh</p>
 <h4 id="配置方法："><a href="#配置方法：" class="headerlink" title="配置方法："></a>配置方法：</h4><p>vi ~&#x2F;.zshrc</p>
 <p>文末增加：</p>
@@ -158,14 +158,14 @@
   </entry>
   <entry>
     <title>使用PyCharm创建Virtualenv环境</title>
-    <url>/2018/11/06/%E4%BD%BF%E7%94%A8PyCharm%E5%88%9B%E5%BB%BAVirtualenv%E7%8E%AF%E5%A2%83/</url>
+    <url>/Chic/2018/11/06/%E4%BD%BF%E7%94%A8PyCharm%E5%88%9B%E5%BB%BAVirtualenv%E7%8E%AF%E5%A2%83/</url>
     <content><![CDATA[<p>1,打开项目配置，按图片所示配置：</p>
 <p><img src="/%E4%BD%BF%E7%94%A8PyCharm%E5%88%9B%E5%BB%BAVirtualenv%E7%8E%AF%E5%A2%83/1.png" alt="bp"></p>
 ]]></content>
   </entry>
   <entry>
     <title>排序算法整理</title>
-    <url>/2019/07/15/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%B4%E7%90%86/</url>
+    <url>/Chic/2019/07/15/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%B4%E7%90%86/</url>
     <content><![CDATA[<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>快速排序是十分常用的高效率的算法，其思想是：先选一个标尺，用它把整个队列过一遍筛选，以保证其左边的元素都不大于它，其右边的元素都不小与它</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 快速排序</span></span><br><span class="line"><span class="comment"> * 数据结构----------------数组</span></span><br><span class="line"><span class="comment"> * 最差时间复杂度-----------每次选取的基准都是最大（或最小）的元素，导致每次只划分出了一个分区，需要进行n-1次划分才能结束递归，时间复杂度为O(n^2)</span></span><br><span class="line"><span class="comment"> * 最优时间复杂度-----------每次选取的基准都是中位数，这样每次都均匀的划分出两个分区，只需要logn次划分就能结束递归，时间复杂度为O(nlogn)</span></span><br><span class="line"><span class="comment"> * 平均时间复杂度-----------O(nlogn)</span></span><br><span class="line"><span class="comment"> * 空间复杂度--------------O(logn)</span></span><br><span class="line"><span class="comment"> * 稳定性-----------------不稳定</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params"><span class="variable">$arr</span></span>)</span>&#123;</span><br><span class="line">  <span class="comment">// 获取数组长度</span></span><br><span class="line">  <span class="variable">$length</span> = <span class="title function_ invoke__">count</span>(<span class="variable">$arr</span>);</span><br><span class="line">  <span class="comment">// 判断长度是否需要继续二分比较</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="variable">$length</span> &lt;= <span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable">$arr</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 定义基准元素</span></span><br><span class="line">  <span class="variable">$base</span> = <span class="variable">$arr</span>[<span class="number">0</span>];</span><br><span class="line">  <span class="comment">// 定义两个空数组，用于存放和基准元素的比较后的结果</span></span><br><span class="line">  <span class="variable">$left</span> = [];</span><br><span class="line">  <span class="variable">$right</span> = [];</span><br><span class="line">  <span class="comment">// 遍历数组</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="variable">$i</span>=<span class="number">1</span>; <span class="variable">$i</span> &lt; <span class="variable">$length</span>; <span class="variable">$i</span>++) &#123; </span><br><span class="line"></span><br><span class="line">    <span class="comment">// 和基准元素作比较</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$arr</span>[<span class="variable">$i</span>] &gt; <span class="variable">$base</span>) &#123;</span><br><span class="line">      <span class="variable">$right</span>[] = <span class="variable">$arr</span>[<span class="variable">$i</span>];</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="variable">$left</span>[] = <span class="variable">$arr</span>[<span class="variable">$i</span>];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 然后递归分别处理left和right</span></span><br><span class="line">  <span class="variable">$left</span> = <span class="title function_ invoke__">quickSort</span>(<span class="variable">$left</span>);</span><br><span class="line">  <span class="variable">$right</span> = <span class="title function_ invoke__">quickSort</span>(<span class="variable">$right</span>);</span><br><span class="line">  <span class="comment">// 合并</span></span><br><span class="line">  <span class="keyword">return</span> <span class="title function_ invoke__">array_merge</span>(<span class="variable">$left</span>,[<span class="variable">$base</span>],<span class="variable">$right</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -188,7 +188,7 @@
   </entry>
   <entry>
     <title>查看Java的汇编指令</title>
-    <url>/2020/07/31/%E6%9F%A5%E7%9C%8BJava%E7%9A%84%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4/</url>
+    <url>/Chic/2020/07/31/%E6%9F%A5%E7%9C%8BJava%E7%9A%84%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4/</url>
     <content><![CDATA[<p>通过javap 命令，可以将字节码文件反编译。如通过下面的命令示例命令：</p>
 <p>javap -c Xxxx.class</p>
 <p>而有时候想看某些JDK底层实现，发现反编译得到的代码并没有什么帮助，因此本文介绍如何查看Java的汇编指令，查看Java代码最真实的运行细节。</p>
@@ -213,7 +213,7 @@
   </entry>
   <entry>
     <title>清除gradle缓存</title>
-    <url>/2019/09/30/%E6%B8%85%E9%99%A4gradle%E7%BC%93%E5%AD%98/</url>
+    <url>/Chic/2019/09/30/%E6%B8%85%E9%99%A4gradle%E7%BC%93%E5%AD%98/</url>
     <content><![CDATA[<h4 id="一，背景"><a href="#一，背景" class="headerlink" title="一，背景"></a>一，背景</h4><p>gradle java项目引用jar包后，jar包更新经常没发即使拉取到最新的jar包</p>
 <h4 id="二，解决办法"><a href="#二，解决办法" class="headerlink" title="二，解决办法"></a>二，解决办法</h4><p>执行命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">gradle clean build --refresh-dependencies</span><br></pre></td></tr></table></figure>
@@ -229,7 +229,7 @@
   </entry>
   <entry>
     <title>设计模式整理</title>
-    <url>/2019/07/15/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%95%B4%E7%90%86/</url>
+    <url>/Chic/2019/07/15/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%95%B4%E7%90%86/</url>
     <content><![CDATA[<h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><p>单例模式解决的是如何在整个项目中创建唯一对象实例的问题。</p>
 <ol>
 <li>$_instance必须声明为静态的私有变量</li>
@@ -270,7 +270,7 @@
   </entry>
   <entry>
     <title>读书笔记-PHP核心技术与最佳实践</title>
-    <url>/2019/07/13/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</url>
+    <url>/Chic/2019/07/13/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-PHP%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</url>
     <content><![CDATA[<h1 id="面向对象思想的核心概念"><a href="#面向对象思想的核心概念" class="headerlink" title="面向对象思想的核心概念"></a>面向对象思想的核心概念</h1><h5 id="异常与错误处理"><a href="#异常与错误处理" class="headerlink" title="异常与错误处理"></a>异常与错误处理</h5><p>PHP里面，遇到任何自身错误都会触发一个错误，而不是抛出异常，PHP遇到非正常代码，通常会触发错误，而不是抛出异常，所以这种错误是不能用异常捕获的。 <strong>PHP只有手动抛出异常后才能捕获。</strong></p>
 <h5 id="PHP中的错误处理机制"><a href="#PHP中的错误处理机制" class="headerlink" title="PHP中的错误处理机制"></a>PHP中的错误处理机制</h5><p>php错误有很多种：warning,notice,deprecated,fatal error。PHP无法自动抛出异常，必须手动进行，可以用set_error_handler接管，进而主动抛出异常。</p>
 <h1 id="面向对象的设计原则"><a href="#面向对象的设计原则" class="headerlink" title="面向对象的设计原则"></a>面向对象的设计原则</h1><h6 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h6><p>single responsibility principle,SRP</p>
